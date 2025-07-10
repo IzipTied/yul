@@ -1,0 +1,247 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Assistant', sans-serif;
+    color: #333;
+    background-image: url('../assets/bg-texture.png'); /* PNG instead of JPG */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    line-height: 1.6;
+    direction: rtl;
+    text-align: right;
+    flex: 1;
+  }
+
+  main {
+    flex: 1;
+  }
+  
+  /* Headings */
+  h1, h2, h3 {
+    font-family: 'Heebo', sans-serif;
+    color: #4b2e2e;
+    text-align: center;
+  }
+  
+  /* Hero Section */
+  
+  .hero {
+    background-image:url(../assets/bg-texture.png);
+    padding: 4rem 2rem;
+  }
+  
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    direction: rtl;
+  }
+  
+  /* צד שמאל – תמונה + שם */
+  .hero-left {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .brand-title {
+    font-size: 1.5rem;
+    color: #b38183;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-left img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #d1a3a4;
+  }
+  
+  /* צד ימין – טקסט וכפתורים */
+  .hero-right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+    text-align: right;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.8rem;
+    color: #4b2e2e;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  /* כפתורים */
+  .hero-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  
+  
+  .btn {
+    display: inline-block;
+    background-color: #d1a3a4;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  .btn-round {
+    background-color: #d1a3a4;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 9999px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    min-width: 150px;
+    height: 48px;
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  /* About Section */
+  .about {
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom right, #fff0f4, #ffeaea);
+  }
+  
+  
+  .about .container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+    direction: ltr;
+  }
+  
+  
+  .about img {
+    width: 200px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    direction: ltr;
+  }
+  
+  .about .text {
+    flex: 1;
+    direction: rtl;     /* מחזיר את הטקסט לימין */
+    text-align: right;
+  }
+  .about {
+    padding: 4rem 2rem;
+    background-color: #fdf1f3;
+  }
+  
+  .about .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    border: 1px solid #e0bfc0; /* מסגרת עדינה */
+    border-radius: 20px;
+    padding: 2rem;
+    background-color: #fff7f8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+  }
+  
+  .about img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #d1a3a4;
+  }
+  
+  .about .text {
+    flex: 1;
+    padding: 1rem;
+  }
+  
+  .about .text h2 {
+    font-size: 2rem;
+    color: #b38183;
+    margin-bottom: 1rem;
+  }
+  
+  .about .text p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.8;
+  }
+   /* Footer */
+footer {
+    background-color: #4b2e2e;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    position: relative;
+    top: 10vh;
+  }
+  
+  footer .socials a {
+    color: white;
+    margin: 0 0.5rem;
+    text-decoration: none;
+  }
+  /* Contact Section */
+.contact {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #fdf1f3;
+    position: relative;
+    top: 15vh;
+  }
+  
+  #home-button {
+    position: fixed;
+    right: 0rem;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 9999;
+    touch-action: manipulation;
+  }
+  
+  #home-button img {
+    width: 100px; /* adjust size if needed */
+    height: 100px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+  
+  #home-button:hover img {
+    transform: scale(1.1);
+  }
+  

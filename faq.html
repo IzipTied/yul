@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>איפור ועיצוב שיער על ידי יול</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  body.fade-in {
+    opacity: 1;
+  }
+
+  a.transition-link {
+    transition: opacity 0.3s ease-in-out;
+  }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<!-- Floating Home Button -->
+<button id="home-button" onclick="goHome()" aria-label="Back to Home">
+  <img src="/assets/yulsogo.png" alt="Home" />
+</button>
+
+
+<!-- Confetti Library -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<!-- Confetti + Navigation Script -->
+<script>
+  function goHome() {
+    confetti({
+      particleCount: 150,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+    
+    setTimeout(() => {
+      // Change this if your homepage is not root
+      window.location.href = "index.html#hero";
+    }, 500);
+  }
+</script>
+
+<body>
+  <div class="faq">
+    <h2>שאלות נפוצות</h2>
+    <div class="slider">
+
+
+      <!-- Slide 1-->
+      <div class="slide">
+        <div class="faq-item">
+          <div class="faq-question">
+            האם האיפור עמיד לאורך כל היום?
+            <span class="arrow">⌄</span>
+          </div>
+          <div class="faq-answer">
+            <p>כן! אני משתמשת רק במוצרים עמידים ואיכותיים שמחזיקים שעות ארוכות – גם בחתונה וגם למסיבה שאחריה 😉</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            אפשר לקבוע פגישה?
+            <span class="arrow">⌄</span>
+          </div>
+          <div class="faq-answer">
+            <p>כמובן! אפשר ליצור קשר בלחיצה על כפתור "דברי איתי".</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            האם מגיעה עד בית הלקוחה?
+            <span class="arrow">⌄</span>
+          </div>
+          <div class="faq-answer">
+            <p>בהחלט, השירות כולל הגעה עד אליך.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide">
+        <div class="faq-item">
+            <div class="faq-question">
+                האם האיפור עמיד לאורך כל היום?
+                <span class="arrow">⌄</span>
+          </div>
+            <div class="faq-answer">
+                <p>כן! אני משתמשת רק במוצרים עמידים ואיכותיים שמחזיקים שעות ארוכות – גם בחתונה וגם למסיבה
+                    שאחריה 😉</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <summary class="faq-question">
+                אפשר לקבוע פגישה?
+                <span class="arrow">⌄</span>
+            </summary>
+            <div class="faq-answer">
+                <p>כמובן! אפשר ליצור קשר בלחיצה על כפתור "דברי איתי".</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <summary class="faq-question">
+                האם מגיעה עד בית הלקוחה?
+                <span class="arrow">⌄</span>
+            </summary>
+            <div class="faq-answer">
+                <p>בהחלט, השירות כולל הגעה עד אליך.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+  <script>
+    // document.querySelectorAll('.faq-question').forEach((question) => {
+    //   question.addEventListener('click', () => {
+    //     const item = question.parentElement;
+    //     item.classList.toggle('active');
+    //   });
+    // });
+  document.querySelectorAll('.faq-item').forEach(item => {
+  const question = item.querySelector('.faq-question');
+  const answer = item.querySelector('.faq-answer');
+
+  question.addEventListener('click', () => {
+    const isActive = item.classList.contains('active');
+
+    // Close any open item
+    document.querySelectorAll('.faq-item.active').forEach(openItem => {
+      if (openItem !== item) {
+        openItem.classList.remove('active');
+        const openAnswer = openItem.querySelector('.faq-answer');
+        openAnswer.style.height = openAnswer.scrollHeight + 'px';
+        requestAnimationFrame(() => {
+          openAnswer.style.height = '0px';
+        });
+        setTimeout(() => {
+          openAnswer.style.height = '';
+        }, 400);
+      }
+    });
+
+    if (!isActive) {
+      item.classList.add('active');
+      answer.style.height = answer.scrollHeight + 'px';
+      setTimeout(() => {
+        answer.style.height = 'auto';
+      }, 400);
+    } else {
+      answer.style.height = answer.scrollHeight + 'px';
+      requestAnimationFrame(() => {
+        answer.style.height = '0px';
+      });
+      setTimeout(() => {
+        item.classList.remove('active');
+        answer.style.height = '';
+      }, 400);
+    }
+  });
+});
+  </script>
+  
+      
+
+        <section class="testimonials">
+          <h2>מה הכלות אומרות</h2>
+          <div class="testimonial">
+            <p>“היא גרמה לי להרגיש כמו מלכה. האיפור נשאר לי לכל היום”</p>
+            <span>— שרה, יוני 2024</span>
+          </div>
+          <div class="testimonial">
+            <p>“מקצועית, נינוחה, מוכשרת בטירוף! ממליצה מאוד”</p>
+            <span>— נעמי, מרץ 2024</span>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why Me -->
+  <section class="why-me">
+    <h2>למה לבחור בי?</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <img src="assets/icon_experience.png" alt="ניסיון">
+        <p>ניסיון של מעל 6 שנים באיפור כלות ואופנה</p>
+      </div>
+      <div class="why-item">
+        <img src="assets/icon_custom.png" alt="התאמה אישית">
+        <p>התאמה מלאה לאופי ולסגנון שלך</p>
+      </div>
+      <div class="why-item">
+        <img src="assets/icon_quality.png" alt="מוצרים">
+        <p>מוצרים עמידים מהמותגים המובילים בעולם</p>
+      </div>
+      <div class="why-item">
+        <img src="assets/icon_chill.png" alt="רוגע">
+        <p>אוירה רגועה ונעימה ביום הכי חשוב שלך</p>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <h2>בואי נהפוך את היום שלך למושלם</h2>
+    <a href="https://wa.me/972524204598"target="_blank" rel="noopener" class="btn">דברי איתי</a>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; איפור ועיצוב שיער על ידי יול 2025</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/yuls.hair.makeup?igsh=MWR5bTczaGNudzZydg=">instagram</a>
+      <a href="https://wa.me/972524204598"target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </footer>
+  <script>
+    // Fade in effect on load
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("fade-in");
+    });
+  
+    // Apply fade-out effect before navigating
+    document.querySelectorAll("a.transition-link").forEach(link => {
+      link.addEventListener("click", function(e) {
+        const url = this.href;
+        if (url && !url.includes("#")) {
+          e.preventDefault();
+          document.body.classList.remove("fade-in");
+          document.body.style.opacity = 0;
+          setTimeout(() => {
+            window.location.href = url;
+          }, 300);
+        }
+      });
+    });
+  </script>
+  
+</body>
+</html>

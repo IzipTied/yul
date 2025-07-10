@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+      body {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  body.fade-in {
+    opacity: 1;
+  }
+
+  a.transition-link {
+    transition: opacity 0.3s ease-in-out;
+  }
+        html {
+          scroll-behavior: smooth;
+        }
+      </style>
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>איפור ועיצוב שיער על ידי יול</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
+
+
+</head>
+<!-- Floating Home Button -->
+<button id="home-button" onclick="goHome()" aria-label="Back to Home">
+  <img src="/assets/yulsogo.png" alt="Home" />
+</button>
+
+
+<!-- Confetti Library -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<!-- Confetti + Navigation Script -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+  const confettiSettings = {
+    particleCount: 150,
+    spread: 70,
+    origin: { y: 0.6 },
+    zIndex: 10000,
+  };
+
+  function fireConfetti() {
+    // Repeat burst for a more noticeable effect
+    confetti(confettiSettings);
+    setTimeout(() => confetti(confettiSettings), 150);
+  }
+
+  function goHome() {
+    fireConfetti();
+
+    setTimeout(() => {
+      window.location.href = "index.html#hero";
+    }, 600);
+  }
+</script>
+
+
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-container">
+        
+        <div class="hero-left">
+          <img src="/assets/yul.jpg" alt="יול מאפרת" />
+        </div>
+        
+        <div class="hero-right">
+          <div class="hero-text">
+            <h1>איפור כלות שמעצים אותך</h1>
+            <p>ביום הגדול שלך, מגיע לך להיראות ולהרגיש מושלמת.</p>
+          </div>
+          <div class="hero-buttons">
+            <a href="https://wa.me/972524204598" class="btn-round" target="_blank" rel="noopener">לקביעת תור ❤</a>
+            <a href="/gallery.html" class="btn-round">לגלריה ❤</a>
+            <a href="/faq.html" class="btn-round">שאלות נפוצות ❤</a>
+          </div>
+        </div>
+    
+      </div>
+    </header>
+    
+    
+
+   <!-- About Section -->
+   <section class="about">
+    <div class="container">
+        <div class="text">
+            <h2>קצת עליי</h2>
+            <p>היי, אני יול מאפרת ומעצבת שיער שמתמחה באיפור כלות. התשוקה שלי לגרום לכל כלה להרגיש מיוחדת, מהממת,
+                ופשוט מושלמת ביום הגדול שלה.
+            </p>...</p>
+        </div>
+    </div>
+</section>
+
+   
+
+   
+      
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>בואי נהפוך את היום שלך למושלם</h2>
+        <a href="https://wa.me/972524204598?text=ממש אהבתי ואני ממש רוצה! תקבעי איתי? "target="_blank" rel="noopener"  class="btn">דברי איתי</a>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy;איפור ועיצוב שיער על ידי יול 2025</p>
+        <div class="socials">
+            <a href="https://www.instagram.com/yuls.hair.makeup?igsh=MWR5bTczaGNudzZydg=">instagram</a>
+            <a href="https://wa.me/972524204598?text= נכנסתי, ראיתי, התאהבתי !! מתי נקבע ?"target="_blank" rel="noopener">WhatsApp
+        </div>
+    </footer>
+    <script>
+  // Fade in effect on load
+  window.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add("fade-in");
+  });
+
+  // Apply fade-out effect before navigating
+  document.querySelectorAll("a.transition-link").forEach(link => {
+    link.addEventListener("click", function(e) {
+      const url = this.href;
+      if (url && !url.includes("#")) {
+        e.preventDefault();
+        document.body.classList.remove("fade-in");
+        document.body.style.opacity = 0;
+        setTimeout(() => {
+          window.location.href = url;
+        }, 300);
+      }
+    });
+  });
+</script>
+
+</body>
+
+</html>

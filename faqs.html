@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>איפור ועיצוב שיער על ידי יול</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        body.fade-in {
+            opacity: 1;
+        }
+
+        a.transition-link {
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<!-- Floating Home Button -->
+<button id="home-button" onclick="goHome()" aria-label="Back to Home">
+    <img src="../assets/yulsogo.png" alt="Home" />
+</button>
+
+
+<!-- Confetti Library -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<!-- Confetti + Navigation Script -->
+<script>
+    function goHome() {
+        confetti({
+            particleCount: 150,
+            spread: 70,
+            origin: { y: 0.6 }
+        });
+
+        setTimeout(() => {
+            // Change this if your homepage is not root
+            window.location.href = "index.html#hero";
+        }, 500);
+    }
+</script>
+
+<body>
+    <div class="faq">
+        <h2>שאלות נפוצות</h2>
+        <div class="slider">
+            <div class="slides">
+
+                <!-- Slide 1 -->
+                <div class="slide">
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            האם האיפור עמיד לאורך כל היום?
+                            <span class="arrow">⌄</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>כן! אני משתמשת רק במוצרים עמידים ואיכותיים שמחזיקים שעות ארוכות – גם בחתונה וגם למסיבה
+                                שאחריה 😉</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            אפשר לקבוע פגישה?
+                            <span class="arrow">⌄</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>כמובן! אפשר ליצור קשר בלחיצה על כפתור "דברי איתי".</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            האם מגיעה עד בית הלקוחה?
+                            <span class="arrow">⌄</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>בהחלט, השירות כולל הגעה עד אליך.</p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Slide 2 (Add more sets of 3 like this) -->
+
+                <div class="slide">
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            האם האיפור עמיד לאורך כל היום?
+                            <span class="arrow">⌄</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>כן! אני משתמשת רק במוצרים עמידים ואיכותיים שמחזיקים שעות ארוכות – גם בחתונה וגם למסיבה
+                                שאחריה 😉</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            אפשר לקבוע פגישה?
+                            <span class="arrow">⌄</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>כמובן! אפשר ליצור קשר בלחיצה על כפתור "דברי איתי".</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            האם מגיעה עד בית הלקוחה?
+                            <span class="arrow">⌄</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>בהחלט, השירות כולל הגעה עד אליך.</p>
+                        </div>
+                    </details>
+                </div>
+                <!-- More <details class="faq-item"> blocks -->
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <section class="testimonials">
+        <h2>מה הכלות אומרות</h2>
+        <div class="testimonial">
+            <p>“היא גרמה לי להרגיש כמו מלכה. האיפור נשאר לי לכל היום”</p>
+            <span>— שרה, יוני 2024</span>
+        </div>
+        <div class="testimonial">
+            <p>“מקצועית, נינוחה, מוכשרת בטירוף! ממליצה מאוד”</p>
+            <span>— נעמי, מרץ 2024</span>
+        </div>
+    </section>
+    </div>
+    </div>
+    </div>
+
+    <!-- Why Me -->
+    <section class="why-me">
+        <h2>למה לבחור בי?</h2>
+        <div class="why-grid">
+            <div class="why-item">
+                <img src="assets/icon_experience.png" alt="ניסיון">
+                <p>ניסיון של מעל 6 שנים באיפור כלות ואופנה</p>
+            </div>
+            <div class="why-item">
+                <img src="assets/icon_custom.png" alt="התאמה אישית">
+                <p>התאמה מלאה לאופי ולסגנון שלך</p>
+            </div>
+            <div class="why-item">
+                <img src="assets/icon_quality.png" alt="מוצרים">
+                <p>מוצרים עמידים מהמותגים המובילים בעולם</p>
+            </div>
+            <div class="why-item">
+                <img src="assets/icon_chill.png" alt="רוגע">
+                <p>אוירה רגועה ונעימה ביום הכי חשוב שלך</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <h2>בואי נהפוך את היום שלך למושלם</h2>
+        <a href="https://wa.me/972524204598?text=חייםםם מה זה היופי הזה?? תעשי גם אותי מושלמת כזו !!" target="_blank" rel="noopener" class="btn">דברי איתי</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; איפור ועיצוב שיער על ידי יול 2025</p>
+        <div class="socials">
+            <a href="https://www.instagram.com/yuls.hair.makeup?igsh=MWR5bTczaGNudzZydg=">Instagram</a>
+            <a href="https://wa.me/972524204598"target="_blank" rel="noopener">WhatsApp
+        </div>
+    </footer>
+ 
+<script>
+    document.querySelectorAll('.faq-item details').forEach(details => {
+        const summary = details.querySelector('summary');
+        const content = details.querySelector('.faq-answer');
+    
+        summary.addEventListener('click', (e) => {
+            e.preventDefault();
+            const isOpen = details.hasAttribute('open');
+    
+            if (!isOpen) {
+                // Opening
+                details.setAttribute('open', '');
+                content.style.height = '0px'; // reset first
+                const fullHeight = content.scrollHeight + 'px';
+                requestAnimationFrame(() => {
+                    content.style.height = fullHeight;
+                });
+    
+                // After animation, reset height to auto
+                setTimeout(() => {
+                    content.style.height = 'auto';
+                }, 400);
+            } else {
+                // Closing
+                const fullHeight = content.scrollHeight + 'px';
+                content.style.height = fullHeight; // set current height
+                requestAnimationFrame(() => {
+                    content.style.height = '0px';
+                });
+    
+                // After animation ends, actually close it
+                setTimeout(() => {
+                    details.removeAttribute('open');
+                    content.style.height = '';
+                }, 400);
+            }
+        });
+    });
+    </script>
+    
+
+    <script>
+        // Fade in effect on load
+        window.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.add("fade-in");
+        });
+
+        // Apply fade-out effect before navigating
+        document.querySelectorAll("a.transition-link").forEach(link => {
+            link.addEventListener("click", function (e) {
+                const url = this.href;
+                if (url && !url.includes("#")) {
+                    e.preventDefault();
+                    document.body.classList.remove("fade-in");
+                    document.body.style.opacity = 0;
+                    setTimeout(() => {
+                        window.location.href = url;
+                    }, 300);
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
